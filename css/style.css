@@ -1,0 +1,139 @@
+#background{
+    Position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: #CEE6CB; 
+    z-index: -1;
+}
+#couleurMDP{
+    color: #454545; 
+}
+.backgroundColorFonce{
+    background-color: #F4F4F4;
+}
+
+.retourSansDeco a{
+color: rgb(0, 0, 0) ;
+
+}
+.espaceRetour{
+    padding-left: 100px;
+}
+
+#svg_panier{
+    text-align: center;
+}
+.bordDeCarte{
+    border-radius: 15px;
+    background-color: #f7f7f7;
+}
+#creerUnCompteVert{
+    color: #00A35C;
+}
+
+.arrow-down{
+    background-image: url("../img/triangle.svg");
+    background-size: contain;
+    z-index: 100;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.05));
+}
+
+.texteDeBienvenueTitre{
+    text-align: center;
+    font-weight: 1000;
+}
+.texteDeBienvenue{
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-weight: 200;
+}
+.centrerCartes{
+    text-align:center;
+}
+.texteAgauche{
+    text-align: left;
+}
+
+.fondVert{
+    width: 100%;
+    background-color: #D4E9D1;
+}
+.backgroundColorFonceCartesVisite{
+    background-image: url("../img/visitCard2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.backgroundColorFonceEtiquettes{
+    background-image: url("../img/etiquettes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.texteCartesVisite {
+    color: white;
+    margin: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+.designChoisiGauche{
+    text-align: left;
+}
+.imgDesignCDV{
+    height: 80%;
+    width: 80%;
+}
+.formulaire{
+    display: block;
+}
+
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  [type=radio] + img {
+    cursor: pointer;
+  }
+
+
+    /* CHECKED STYLES */
+    [type=radio]:not(:checked)+ img {
+        box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1);
+      }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + img {
+    box-shadow: 0 0 2pt 1pt #037946;
+  }
+
+
+
+    /* CHECKED STYLES */
+ 
+
+  .alignerCdVdroite{
+      text-align: center;
+  }
+
+  .alignerCdVgauche{
+    text-align: left;
+}
+.imgEtiquette{
+    width: 80%;
+    height: 80%;
+}
+.etiquette{
+    box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) { 
+    .arrow-down{
+        background-image:none;
+    }
+ }
