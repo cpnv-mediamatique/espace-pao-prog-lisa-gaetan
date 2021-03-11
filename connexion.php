@@ -12,24 +12,24 @@ try
 }
 
 if(!empty($mail)){
-$req = $bdd->prepare("SELECT * FROM utilisateur WHERE user_mail = :mail");
-$req->execute(array(
-    ':mail' => $mail));
+    $req = $bdd->prepare("SELECT * FROM utilisateur WHERE user_mail = :mail");
+    $req->execute(array(
+        ':mail' => $mail));
 
-$resultat = $req->fetch();
+    $resultat = $req->fetch();
 
-$isPasswordCorrect = password_verify($_POST['mdp'], $resultat['user_mdp']);
+    $isPasswordCorrect = password_verify($_POST['mdp'], $resultat['user_mdp']);
 
-if ($isPasswordCorrect){
+    if ($isPasswordCorrect){
 
-    session_start();
-    $_SESSION['nom'] = $resultat['user_nom'];
-    header('location: indexconnect.php');
+        session_start();
+        $_SESSION['nom'] = $resultat['user_nom'];
+        header('location: indexconnect.php');
 
-}else{
+    }else{
 
-    header('location: login.php');
+        header('location: login.php');
 
-}
+    }
 }
 ?>

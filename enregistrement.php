@@ -4,6 +4,8 @@ $nom = $_POST["nom"];
 $mail = $_POST["mail"];
 $mdp = password_hash($_POST["mdp"], PASSWORD_DEFAULT);
 $rang = "élève";
+$token = bin2hex(openssl_random_pseudo_bytes(12));
+
 try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=pao;charset=utf8', 'root', '');
@@ -13,16 +15,21 @@ try
     die('Erreur : '.$e->getMessage());
 }
 
-$i = $bdd->prepare("INSERT INTO utilisateur (user_nom , user_mail , user_mdp , user_rang) VALUES(:nom , :mail , :mdp , :rang)");
+if(!empty($mail)){
 
-$i->bindParam(":nom", $nom);
-$i->bindParam(":mail", $mail);
-$i->bindParam(":mdp", $mdp);
-$i->bindParam(":rang", $rang);
-$i->execute();
+    $i = $bdd->prepare("INSERT INTO utilisateur (user_nom , user_mail , user_mdp , user_rang , token) VALUES(:nom , :mail , :mdp , :rang, :token)");
 
-session_start();
-$_SESSION['nom'] = $nom;
+    $i->bindParam(":nom", $nom);
+    $i->bindParam(":mail", $mail);
+    $i->bindParam(":mdp", $mdp);
+    $i->bindParam(":rang", $rang);
+    $i->bindParam(":token", $token);
 
-header('location: indexconnect.php');
+    $i->execute();
+
+    session_start();
+    $_SESSION['nom'] = $nom;
+
+    header('location: indexconnect.php');
+}
 ?>

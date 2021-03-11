@@ -83,16 +83,10 @@
 
 
                             <div class="row justify-content-center align-items-center m-3">
-                                <div class="col">
-                                    <div class="mb-3">
-                                        <a href="#" id="couleurMDP">Mot de passe oublié?</a>
-                                    </div>
-                                </div>
 
                                 <div class="col">
                                     <a href="login.php">
-                                    <button type="submit" class="btn btn-success btn-block mb-3 btn-rounded">Se
-                                        connecter</button>
+                                    <button type="submit" class="btn btn-success btn-block mb-3 btn-rounded">S'inscrire</button>
                                     </a>
                                 </div>
                                 
