@@ -25,7 +25,7 @@
         <nav class="navbar navbar-dark primary-color retourSansDeco py-0">
 
             <div class="m-4">
-                <a href="index.html">
+                <a href="index.php">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#00A35C"
                         class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -35,7 +35,7 @@
                 </a>
             </div>
             <div class="mx-4">
-                <a href="panier.html">
+                <a href="panier.php">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#00A35C"
                         class="bi bi-cart4 mb-2" viewBox="0 0 16 16">
                         <path
@@ -107,7 +107,7 @@
                         </div>
                         <div class="row my-5">
                             <div class="centrerCartes">
-                                <a href="cartesVisite.html" class="btn btn-dark">Commander</a>
+                                <a href="cartesVisite.php" class="btn btn-dark">Commander</a>
                             </div>
                         </div>
                     </div>
