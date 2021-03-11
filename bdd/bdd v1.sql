@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `pao`.`utilisateur` (
   `user_mdp` VARCHAR(450) NULL,
   `user_mail` VARCHAR(100) NULL,
   `user_rang` ENUM('élève', 'enseignant', 'élève cbe') NULL,
+  `token`LONGTEXT() NULL,
   PRIMARY KEY (`id_utilisateur`))
 ENGINE = InnoDB;
 
