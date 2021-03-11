@@ -34,7 +34,7 @@ session_start();
                 <div class="mx-4">
                     <a href="statut.php">Statuts</a>
                     <a class="mx-4" href="commandes.php">Commandes</a>
-                    <a href="index.php">
+                    <a href="deconexion.php">
                         <button type="button" class="btn btn-success">Se déconnecter</button>
                     </a>
                 </div>
