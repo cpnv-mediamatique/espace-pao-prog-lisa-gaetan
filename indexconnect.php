@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Espace PAO</title>
+    <title>Material Design for Bootstrap</title>
     <!-- MDB icon -->
     <link rel="icon" href="img/favicon.png" type="image/x-icon" />
     <!-- Font Awesome -->
@@ -34,7 +34,7 @@ session_start();
                 <div class="mx-4">
                     <a href="statut.php">Statuts</a>
                     <a class="mx-4" href="commandes.php">Commandes</a>
-                    <a href="deconexion.php">
+                    <a href="index.php">
                         <button type="button" class="btn btn-success">Se déconnecter</button>
                     </a>
                 </div>
