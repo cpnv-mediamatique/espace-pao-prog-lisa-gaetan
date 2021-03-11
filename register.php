@@ -29,7 +29,7 @@
             <div class="text-center">
                 <img class="mb-5" src="img/Espace_entreprise_logo.svg" style="width: 12rem" />
                 <div class="card-body shadow-3-strong bordDeCarte" style="width: 30rem ">
-                    <form action="login.php">
+                    <form action="enregistrement.php" method="post"> 
                         <div class="formulaire">
 
                             <div class="row mb-0 m-3 mt-4">
@@ -42,7 +42,7 @@
                                 </div>
                                 <div class="col-11">
                                     <div class="form-outline">
-                                        <input type="email" id="form2Example1" class="form-control" />
+                                        <input type="text" id="form2Example1" class="form-control" name="nom" />
                                         <label class="form-label" for="form2Example1">Nom & Prénom</label>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="col-11">
                                     <div class="form-outline mb-4">
-                                        <input type="email" id="form2Example1" class="form-control" />
+                                        <input type="email" id="form2Example1" class="form-control" name="mail" />
                                         <label class="form-label" for="form2Example1">Adresse E-mail</label>
                                     </div>
                                 </div>
@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="col-11">
                                     <div class="form-outline mb-3">
-                                        <input type="password" id="form2Example2" class="form-control" />
+                                        <input type="password" id="form2Example2" class="form-control" name="mdp" />
                                         <label class="form-label" for="form2Example2">Mot de passe</label>
                                     </div>
                                 </div>
