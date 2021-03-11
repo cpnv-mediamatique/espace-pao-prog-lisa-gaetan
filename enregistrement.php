@@ -31,5 +31,7 @@ if(!empty($mail)){
     $_SESSION['nom'] = $nom;
 
     header('location: indexconnect.php');
+}else{
+    header('location: register.php');
 }
 ?>

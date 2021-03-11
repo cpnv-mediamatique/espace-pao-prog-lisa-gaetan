@@ -31,5 +31,7 @@ if(!empty($mail)){
         header('location: login.php');
 
     }
+}else{
+    header('location: login.php');
 }
 ?>
