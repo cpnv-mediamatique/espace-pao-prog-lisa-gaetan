@@ -29,9 +29,9 @@
             </div>
             <div class="row">
                 <div class="mx-4">
-                    <a href="statut.html">Statuts</a>
-                    <a class="mx-4" href="commandes.html">Commandes</a>
-                    <a href="index.html">
+                    <a href="statut.php">Statuts</a>
+                    <a class="mx-4" href="commandes.php">Commandes</a>
+                    <a href="index.php">
                         <button type="button" class="btn btn-success">Se déconnecter</button>
                     </a>
                 </div>
@@ -105,7 +105,7 @@
                                     <p class="card-text">
                                         Des cartes de visite sur mesure, avec des designs et une impression de qualité.
                                     </p>
-                                    <a href="cartesVisite.html" class="btn btn-success">Commander</a>
+                                    <a href="cartesVisite.php" class="btn btn-success">Commander</a>
                             </div>
                         </div>
                     </div>
@@ -136,7 +136,7 @@
                                         téléphones ou d’autres
                                         usages.
                                     </p>
-                                    <a href="etiquettes.html" class="btn btn-success">Commander</a>
+                                    <a href="etiquettes.php" class="btn btn-success">Commander</a>
                             </div>
                         </div>
                     </div>

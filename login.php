@@ -28,7 +28,7 @@
             <div class="text-center">
                 <img class="mb-5" src="img/Espace_entreprise_logo.svg" style="width: 12rem" />
                 <div class="card-body shadow-3-strong bordDeCarte" style="width: 30rem ">
-                    <form action="indexconnect.html">
+                    <form action="indexconnect.php">
                         <div class="formulaire">
                             <!-- Email input -->
                             <div class="row mb-0 m-3 mt-4">
@@ -82,7 +82,7 @@
                             <!-- Register buttons -->
                             <div class="row">
                                 <div class="mb-4">
-                                    <span class="message">Pas encore membre ? <a id="creerUnCompteVert" href="register.html">Créer un compte</a></span>
+                                    <span class="message">Pas encore membre ? <a id="creerUnCompteVert" href="register.php">Créer un compte</a></span>
                                 </div>
                             </div>
 
