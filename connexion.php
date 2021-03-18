@@ -4,7 +4,7 @@ $mail = $_POST["mail"];
 
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=pao;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=pao;charset=utf8', 'root', 'root');
 }
     catch(Exception $e)
 {
