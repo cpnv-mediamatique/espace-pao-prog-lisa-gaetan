@@ -28,9 +28,9 @@ $mailContent = "<h1>Test</h1>
 $mail->Body = $mailContent;
 
 if($mail->send()){
-    echo 'Message has been sent';
+    echo 'Le mail a bien été envoyé.';
 }else{
-    echo 'Message could not be sent.';
+    echo 'Le mail a pas pu être envoyé.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 }
 ?>
