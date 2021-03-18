@@ -29,7 +29,7 @@
             <div class="text-center">
                 <img class="mb-5" src="img/Espace_entreprise_logo.svg" style="width: 12rem" />
                 <div class="card-body shadow-3-strong bordDeCarte" style="width: 30rem ">
-                    <form action="enregistrement.php" method="post"> 
+                    <form action="verification.php" method="post"> 
                         <div class="formulaire">
 
                             <div class="row mb-0 m-3 mt-4">
