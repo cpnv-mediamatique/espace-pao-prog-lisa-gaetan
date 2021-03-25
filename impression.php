@@ -65,7 +65,7 @@ session_start();
                             <div class="d-flex col-7 align-items-center justify-content-center">
                                 <div class="centrerCartes">
                                     <p class="card-text">
-                                        Nombres de cartes souhaitées:
+                                        Nombre d'exemplaires souhaités:
                                     </p>
                                 </div>
 
@@ -74,9 +74,43 @@ session_start();
 
                                 <select class="btn btn-success dropdown-toggle browser-default custom-select"
                                     aria-haspopup="true" aria-expanded="false">
-                                    <option value="1">10</option>
-                                    <option value="2">50</option>
-                                    <option value="3">100</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">40</option>
+                                    <option value="32">50</option>
+                                    <option value="33">60</option>
+                                    <option value="34">70</option>
+                                    <option value="35">80</option>
+                                    <option value="36">90</option>
+                                    <option value="37">100</option>
                                 </select>
                             </div>
                         </div>
@@ -84,25 +118,27 @@ session_start();
                         <div class="d-flex row justify-content-center mb-3 mx-2">
                             <div class="col-10">
                                 <div class="form-outline mb-3">
-                                    <input type="text" id="form2Example2" class="form-control" name="nom_prenom"/>
+                                    <input type="text" id="form2Example2" class="form-control" />
                                     <label class="form-label" for="form2Example2">Nom & Prénom</label>
                                 </div>
                             </div>
                         </div>
                         <!-- Titre -->
                         <div class="d-flex row justify-content-center mb-3 mx-2">
-                            <div class="col-10">
-                                <div class="form-outline mb-3">
-                                    <input type="text" id="form2Example2" class="form-control" name="titre"/>
-                                    <label class="form-label" for="form2Example2">Titre</label>
-                                </div>
-                            </div>
+                        <input type="hidden" name="MAX_FILE_SIZE" value="838608" />
+
+                        <input type="file" />
+                            
+                            
+                            
+                            
+                            
                         </div>
                         <!-- Numéro de téléphone -->
                         <div class="d-flex row justify-content-center mb-3 mx-2">
                             <div class="col-10">
                                 <div class="form-outline mb-3">
-                                    <input type="text" id="form2Example2" class="form-control" name="numero_telephone" />
+                                    <input type="text" id="form2Example2" class="form-control" />
                                     <label class="form-label" for="form2Example2">Numéro de téléphone</label>
                                 </div>
                             </div>
@@ -112,7 +148,7 @@ session_start();
                             <div class="col-12">
                                 <div class="designChoisiGauche">
                                     <p class="card-text">
-                                        Design choisi :
+                                        Format choisi :
                                     </p>
                                 </div>
                             </div>
@@ -124,7 +160,7 @@ session_start();
 
                                         <label class="alignerCdVdroite">
                                             <input type="radio" name="design" value="1" checked>
-                                            <img class="imgDesignCDV"  src="img/design1.png" alt="Design 1">
+                                            <img class="imgDesignCDV"  src="img/A3.jpg" alt="Design 1">
                                           </label>
                                     </div>
                                 </div>
@@ -133,31 +169,13 @@ session_start();
                                         
                                         <label class="alignerCdVgauche">
                                             <input type="radio" name="design" value="2" checked>
-                                            <img class="imgDesignCDV"  src="img/design2.png" alt="Design 2">
+                                            <img class="imgDesignCDV"  src="img/A4.jpg" alt="Design 2">
                                           </label>
                                     </div>
 
                                 </div>
                             </div>
-                            <div class="row mb-5 mx-2 mt-4">
-                                <div class="col-6">
-                                    <div class="form-check">
-                                        <label class="alignerCdVdroite">
-                                            <input type="radio" name="design" value="3" checked>
-                                            <img class="imgDesignCDV"  src="img/design3.png" alt="Design 3">
-                                          </label>
-                                    </div>
 
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-check">
-                                        <label class="alignerCdVgauche">
-                                            <input type="radio" name="design" value="4" checked>
-                                            <img class="imgDesignCDV"  src="img/design4.PNG" alt="Design 4">
-                                          </label>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="row mb-5">
                             <div class="centrerCartes">
