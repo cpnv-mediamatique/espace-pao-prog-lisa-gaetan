@@ -28,7 +28,7 @@ session_start();
     <nav class="navbar navbar-dark primary-color retourSansDeco py-0">
 
       <div class="m-4">
-        <a href="index.php">
+        <a href="indexconnect.php">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#00A35C" class="bi bi-arrow-bar-left"
             viewBox="0 0 16 16">
             <path fill-rule="evenodd"

@@ -1,5 +1,22 @@
 <?php 
 session_start();
+
+$id = $_SESSION['id'];
+
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=pao;charset=utf8', 'root', '');
+}
+    catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
+
+$req = $bdd->prepare("SELECT * FROM utilisateur WHERE id_utilisateur = :id");
+$req->execute(array(
+    ':id' => $id));
+
+$resultat = $req->fetch();
 ?>
 <!DOCTYPE html>
 <html lang="en">
