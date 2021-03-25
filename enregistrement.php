@@ -8,7 +8,7 @@ $token = bin2hex(openssl_random_pseudo_bytes(12));
 
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=pao;charset=utf8', 'root', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=pao;charset=utf8', 'root', '');
 }
     catch(Exception $e)
 {
