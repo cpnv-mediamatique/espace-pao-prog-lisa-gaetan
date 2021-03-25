@@ -20,13 +20,13 @@ $mail->SMTPAuth = false;
 $mail->SMTPAutoTLS = false; 
 $mail->Port = 25;
 
-$mail->setFrom('noreply@mediamatique.ch', 'Mailtrap');
-$mail->addReplyTo('noreply@mediamatique.ch', 'Mailtrap');
+$mail->setFrom('noreply@mediamatique.ch', 'Espace PAO');
+$mail->addReplyTo('noreply@mediamatique.ch', 'Espace PAO');
 $mail->addAddress("$mailp", "$nom"); 
 
 $mail->Subject = 'Confirmation de l adresse e-mail';
-$mail->isHTML(true);
-$mail->Body = "Veuillez valider votre adresse mail en cliquant ce lien: </br> http://lgorgerat.eleves.mediamatique.ch/espace-pao/enregistrement.php?mailp=$mailp&token=$token";
+$mail->Body = "Veuillez valider votre adresse mail en cliquant ce lien: http://lgorgerat.eleves.mediamatique.ch/espace-pao/enregistrement.php?mailp=$mailp&token=$token
+";
 
 session_start();
     $_SESSION['nom'] = $nom;
@@ -36,7 +36,6 @@ session_start();
 
 if($mail->send()){
     echo 'Le mail a bien été envoyé.';
-    header('location: enregistrement.php');
 }else{
     echo 'Le mail a pas pu être envoyé. ';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
