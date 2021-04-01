@@ -5,7 +5,7 @@ $id = $_SESSION['id'];
 
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=pao;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=lgorgerat;charset=utf8', 'lgorgerat', 'fpTmuxcqYJXL');
 }
     catch(Exception $e)
 {
@@ -49,8 +49,16 @@ $resultat = $req->fetch();
             </div>
             <div class="row">
                 <div class="mx-4">
-                    <a href="statut.php">Statuts</a>
-                    <a class="mx-4" href="commandes.php">Commandes</a>
+                    <?php
+                     if($resultat['user_rang'] !== "élève" && $resultat['user_rang'] !== "enseignant"){
+                    ?>
+                        <a href="statut.php">Statuts</a>
+                        <a class="mx-4" href="commandes.php">Commandes</a>
+                    <?php 
+                        }else{
+                            echo "";
+                        }
+                    ?>
                     <a href="index.php">
                         <button type="button" class="btn btn-success">Se déconnecter</button>
                     </a>
@@ -82,7 +90,7 @@ $resultat = $req->fetch();
                                     <p class="card-text">
                                         Nous nous chargeons de vos impressions avec choix du grammage.
                                     </p>
-                                    <a href="impression.php" class="btn btn-success">Commander</a>
+                                    <a href="#!" class="btn btn-success">Commander</a>
                             </div>
                         </div>
                     </div>
