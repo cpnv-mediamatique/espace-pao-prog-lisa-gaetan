@@ -49,6 +49,7 @@ $resultat = $req->fetch();
             </div>
             <div class="row">
                 <div class="mx-4">
+                    <p>Connecté en tant que <?= $_SESSION['nom'] ?></p>
                     <a href="statut.php">Statuts</a>
                     <a class="mx-4" href="commandes.php">Commandes</a>
                     <a href="index.php">
