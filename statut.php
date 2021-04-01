@@ -91,7 +91,9 @@ session_start();
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu5">
             <span class="dropdown-item">Elève</span>
-            <span class="dropdown-item disabled">Enseignant</span>
+            <span class="dropdown-item">Enseignant</span>
+            <span class="dropdown-item">Eleve cbe</span>
+            <span class="dropdown-item">Admin</span>
           </div>
         </span>
       </div>
