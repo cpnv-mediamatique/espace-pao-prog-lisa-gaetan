@@ -1,8 +1,8 @@
 <?php 
 session_start();
-
+//assigne le rang de base
 $rang = "élève";
-
+//récupère le mail et token contenu dans le mail
 $validmail = $_GET['mailp'];
 $validtoken = $_GET['token'];
 
@@ -14,9 +14,9 @@ try
 {
     die('Erreur : '.$e->getMessage());
 }
-
+//vérifie si le mail et token stockés sont pareil que ceux reçu
 if($_SESSION['mail'] == $validmail && $_SESSION['token'] == $validtoken){
-
+    
     $i = $bdd->prepare("INSERT INTO utilisateur (user_nom , user_mail , user_mdp , user_rang , token) VALUES(:nom , :mail , :mdp , :rang, :token)");
 
     $i->bindParam(":nom", $_SESSION['nom']);
