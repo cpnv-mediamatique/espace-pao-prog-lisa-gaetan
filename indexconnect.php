@@ -17,6 +17,11 @@ $req->execute(array(
     ':id' => $id));
 
 $resultat = $req->fetch();
+
+$nom = $resultat['user_nom'];
+
+$_SESSION['nom'] = $nom;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,9 +54,7 @@ $resultat = $req->fetch();
             </div>
             <div class="row">
                 <div class="mx-4">
-                    <p>Connecté en tant que <?= $_SESSION['nom'] ?></p>
-                    <a href="statut.php">Statuts</a>
-                    <a class="mx-4" href="commandes.php">Commandes</a>
+                    <p style="display:inline;margin-right:20px;color:#1abe5c;">Bonjour <?= $_SESSION['nom'] ?></p>
                     <?php
                      if($resultat['user_rang'] !== "élève" && $resultat['user_rang'] !== "enseignant"){
                     ?>
@@ -60,6 +63,8 @@ $resultat = $req->fetch();
                     <?php 
                         }else{
                             echo "";
+                            ?>
+                            <?php
                         }
                     ?>
                     <a href="index.php">
@@ -93,7 +98,7 @@ $resultat = $req->fetch();
                                     <p class="card-text">
                                         Nous nous chargeons de vos impressions avec choix du grammage.
                                     </p>
-                                    <a href="#!" class="btn btn-success">Commander</a>
+                                    <a href="impression.php" class="btn btn-success">Commander</a>
                             </div>
                         </div>
                     </div>
