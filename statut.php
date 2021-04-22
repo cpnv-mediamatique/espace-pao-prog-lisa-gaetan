@@ -97,6 +97,7 @@ session_start();
 {
     $nom = $donnees['user_nom'];
     $rang = $donnees['user_rang'];
+    $id = $donnees['id_utilisateur'];
 
 ?>
     <div class="row mt-3">
@@ -111,10 +112,10 @@ session_start();
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu5">
             <form action="modif.php" method="post">
-              <span class="dropdown-item">Elève</span>
-              <span class="dropdown-item">Enseignant</span>
-              <span class="dropdown-item">Eleve cbe</span>
-              <span class="dropdown-item">Admin</span>
+              <span class="dropdown-item"><a href="modif.php?id=<?= $id ?>&modification=élève&rang=<?= $rang ?>">Elève</a></span>
+              <span class="dropdown-item"><a href="modif.php?id=<?= $id ?>&modification=enseignant&rang=<?= $rang ?>">Enseignant</a></span>
+              <span class="dropdown-item"><a href="modif.php?id=<?= $id ?>&modification=élève cbe&rang=<?= $rang ?>">Eleve cbe</a></span>
+              <span class="dropdown-item"><a href="modif.php?id=<?= $id ?>&modification=admin&rang=<?= $rang ?>">Admin</a></span>
             </form>
           </div>
         </span>
