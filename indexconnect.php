@@ -5,7 +5,7 @@ $id = $_SESSION['id'];
 
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=lgorgerat;charset=utf8', 'lgorgerat', 'fpTmuxcqYJXL');
+    $bdd = new PDO('mysql:host=localhost;dbname=pao;charset=utf8', 'root', 'root');
 }
     catch(Exception $e)
 {

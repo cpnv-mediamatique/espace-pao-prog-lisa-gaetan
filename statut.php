@@ -78,49 +78,58 @@ session_start();
         <input class="form-control" type="text" placeholder="Rechercher" aria-label="Search">
       </div>
     </div>
+    
+      
+
+        <?php 
+    try
+        {
+            $bdd = new PDO('mysql:host=localhost;dbname=pao;charset=utf8', 'root', 'root');
+        }
+        catch(Exception $e)
+        {
+            die('Erreur : '.$e->getMessage());
+        }
+
+    $reponse = $bdd->query('SELECT * FROM utilisateur;');
+    
+    while ($donnees = $reponse->fetch())
+{
+    $nom = $donnees['user_nom'];
+    $rang = $donnees['user_rang'];
+
+?>
     <div class="row mt-3">
       <div class="col-8">
-        <span class="font-weight-bold">cmonney</span>
-        <p class="design">césar.monney@cpnv.ch</p>
+        <p> <?= $nom ?>
       </div>
       <div class="col-4">
         <span class="d-flex col-sm justify-content-end mb-5">
           <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            Elève CBE
+            <?= $rang ?>
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu5">
-            <span class="dropdown-item">Elève</span>
-            <span class="dropdown-item">Enseignant</span>
-            <span class="dropdown-item">Eleve cbe</span>
-            <span class="dropdown-item">Admin</span>
+            <form action="modif.php" method="post">
+              <span class="dropdown-item">Elève</span>
+              <span class="dropdown-item">Enseignant</span>
+              <span class="dropdown-item">Eleve cbe</span>
+              <span class="dropdown-item">Admin</span>
+            </form>
           </div>
         </span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-8">
-        <span class="font-weight-bold">ggentet</span>
-        <p class="design">gabriel.gentet@cpnv.ch</p>
-      </div>
-      <div class="col-4">
-        <span class="d-flex col-sm justify-content-end mb-5">
-          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Elève CBE
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu5">
-            <span class="dropdown-item">Elève</span>
-            <span class="dropdown-item disabled">Enseignant</span>
-          </div>
-        </span>
-      </div>
+    <?php
+}
 
+$reponse->closeCursor(); // Termine le traitement de la requête
 
-    </div>
+?>
+
 
   </div>
-    <!-- End your project here-->
+  <!-- End your project here-->
 </body>
 
 
@@ -129,8 +138,8 @@ session_start();
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js">
+</script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
