@@ -82,75 +82,57 @@ session_start();
         </span>
       </div>
     </div>
+    <?php 
+    try {
+      $bdd = new PDO('mysql:host=localhost;dbname=lgorgerat;charset=utf8', 'lgorgerat', 'fpTmuxcqYJXL');
+    } catch (Exception $e) {
+        die('Erreur : '.$e -> getMessage());
+    }
+
+    $info = $bdd -> prepare("SELECT * FROM etiquettes INNER JOIN utilisateur WHERE fk_utilisateur =  id_utilisateur");
+
+    $info->execute();
+
+    while ($donnees = $info->fetch()){
+
+      $nom = $donnees['user_nom'];
+      $design = $donnees['eti_design'];
+      $temps = $donnees['eti_date'];
+      $titre = $donnees['eti_nom'];
+      $classe = $donnees['eti_classe'];
+      $statut = $donnees['eti_statut'];
+      $id = $donnees['id_etiquette'];
+  
+    ?>
     <div class="row mt-3">
       <div class="col-4">
-        <span class="font-weight-bold">cmonney</span>
-        <p class="font-weight-light">Étiquettes / Format n°2</p>
-        <img class="etiquette mb-3" src="img/wilson.jpg" style="max-width: 50%;">
+        <span class="font-weight-bold"><?= $nom ?></span>
+        <p class="font-weight-light">Format n°<?= $design ?></p>
+        <p class="font-weight-light"><?= $titre ?></p>
+        <p class="font-weight-light"><?= $classe ?></p>
       </div>
       <div class="col-4 d-flex text justify-content-center">
-        <p class="mt-4">40</p>
+        <p class="mt-4"><?= $temps ?></p>
       </div>
       <div class="col-4">
         <span class="d-flex col-sm justify-content-end mb-5">
           <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            Traitée
+            <?= $statut ?>
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu5">
-            <span class="dropdown-item">En cours</span>
-            <span class="dropdown-item ">En attente</span>
+              <span class="dropdown-item"><a href="modif_com.php?id=<?= $id ?>&modification=traitée&statut=<?= $statut ?>">Traitée</a></span>
+              <span class="dropdown-item"><a href="modif_com.php?id=<?= $id ?>&modification=en cours&statut=<?= $statut ?>">En cours</a></span>
+              <span class="dropdown-item"><a href="modif_com.php?id=<?= $id ?>&modification=en attente&statut=<?= $statut ?>">En attente</a></span>
           </div>
         </span>
       </div>
     </div>
-    <div class="row">
-      <div class="col-4">
-        <span class="font-weight-bold">ggentet</span>
-        <p class="font-weight-light">Cartes de visites / Design n°2</p>
-        <img class="etiquette mb-3" src="img/design2.png" style="max-width: 50%;">
-      </div>
-      <div class="col-4 col-4 d-flex text justify-content-center">
-        <p class="mt-4">80</p>
-      </div>
-      <div class="col-4">
-        <span class="d-flex col-sm justify-content-end mb-5">
-          <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            En cours
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu5">
-            <span class="dropdown-item">Traitée</span>
-            <span class="dropdown-item">En attente</span>
-          </div>
-        </span>
-      </div>
+    <?php 
 
-
-    </div>
-    <div class="row">
-      <div class="col-4">
-        <span class="font-weight-bold">mkarlen</span>
-        <p class="font-weight-light">Impression / Format A3</p>
-        <a href="pdf/Affiche_semiotique.pdf"> Fichier à imprimer </a>
-      
-      </div>
-      <div class="col-4 col-4 d-flex text justify-content-center">
-        <p class="mt-4">80</p>
-      </div>
-      <div class="col-4">
-        <span class="d-flex col-sm justify-content-end mb-5">
-          <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            En cours
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu5">
-            <span class="dropdown-item">Traitée</span>
-            <span class="dropdown-item">En attente</span>
-          </div>
-        </span>
-      </div>
-
+    };
+    
+    ?>
 
     </div>
 

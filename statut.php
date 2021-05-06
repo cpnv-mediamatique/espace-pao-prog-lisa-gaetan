@@ -84,7 +84,7 @@ session_start();
         <?php 
     try
         {
-            $bdd = new PDO('mysql:host=localhost;dbname=pao;charset=utf8', 'root', 'root');
+            $bdd = new PDO('mysql:host=localhost;dbname=lgorgerat;charset=utf8', 'lgorgerat', 'fpTmuxcqYJXL');
         }
         catch(Exception $e)
         {
@@ -111,7 +111,6 @@ session_start();
             <?= $rang ?>
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu5">
-            <form action="modif.php" method="post">
               <span class="dropdown-item"><a href="modif.php?id=<?= $id ?>&modification=élève&rang=<?= $rang ?>">Elève</a></span>
               <span class="dropdown-item"><a href="modif.php?id=<?= $id ?>&modification=enseignant&rang=<?= $rang ?>">Enseignant</a></span>
               <span class="dropdown-item"><a href="modif.php?id=<?= $id ?>&modification=élève cbe&rang=<?= $rang ?>">Eleve cbe</a></span>

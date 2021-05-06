@@ -56,12 +56,12 @@ session_start();
                 <div class="col m-5">
                     <!-- Nbr de cartes -->
                     <div class="card">
-                        
+                        <form action="com-eti.php" method="post">
                         <!-- Nom et prénom -->
                         <div class="d-flex row justify-content-center mb-3 mx-2">
                             <div class="col-10">
                                 <div class="form-outline mt-5">
-                                    <input type="text" id="form2Example2" class="form-control" />
+                                    <input type="text" id="form2Example2" class="form-control" name="titre"/>
                                     <label class="form-label" for="form2Example2">Nom & prénom de l'enseignant*</label>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@ session_start();
                         <div class="d-flex row justify-content-center mb-3 mx-2">
                             <div class="col-10">
                                 <div class="form-outline mb-3">
-                                    <input type="text" id="form2Example2" class="form-control" />
+                                    <input type="text" id="form2Example2" class="form-control" name="classe"/>
                                     <label class="form-label" for="form2Example2">Nom de votre classe*</label>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@ session_start();
                                 <div class="form-check">
                                     <label class="alignerCdVdroite">
                                         <label class="alignerCdVdroite">
-                                            <input type="radio" name="design" value="2" checked />
+                                            <input type="radio" name="design" value="1" checked />
                                             <img class="imgEtiquette"  src="img/reto.jpg" alt="Reto">
                                           </label>
                                       </label>
@@ -110,9 +110,10 @@ session_start();
                         </div>
                         <div class="row my-5">
                             <div class="centrerCartes">
-                                <a href="cartesVisite.php" class="btn btn-dark">Commander</a>
+                                <a href="com-eti.php"><button type="submit" class="btn btn-dark btn-success btn-block mb-3 btn-rounded">Commander</button></a>
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
                 <div class="col m-5">

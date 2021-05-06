@@ -4,7 +4,7 @@ session_start();
 $id = $_SESSION['id'];
 $id_modif = $_GET['id'];
 $modification = $_GET['modification'];
-$acturang = $_GET['rang'];
+$acturang = $_GET['statut'];
 
 try
 {
@@ -31,8 +31,8 @@ $req2 = $bdd->prepare("SELECT * FROM utilisateur");
 
 $req2->execute();
 
-$transform = $bdd->prepare("UPDATE utilisateur
-SET user_rang = REPLACE(user_rang, :acturang, :modification) WHERE id_utilisateur = :id_modif");
+$transform = $bdd->prepare("UPDATE etiquettes
+SET eti_statut = REPLACE(eti_statut, :acturang, :modification) WHERE id_etiquette = :id_modif");
 
 $transform->bindParam(":modification", $modification);
 $transform->bindParam(":acturang", $acturang);
@@ -40,7 +40,7 @@ $transform->bindParam(":id_modif", $id_modif);
 
 $transform->execute();
 
-header('location: statut.php');
+header('location: commandes.php');
 
 }else{
     echo"Accés refusé.";
