@@ -107,9 +107,9 @@ session_start();
     <div class="row mt-3">
       <div class="col-4">
         <span class="font-weight-bold"><?= $nom ?></span>
-        <p class="font-weight-light">Format n°<?= $design ?></p>
-        <p class="font-weight-light"><?= $titre ?></p>
-        <p class="font-weight-light"><?= $classe ?></p>
+        <p class="font-weight-light mb-0">Format n°<?= $design ?></p>
+        <p class="font-weight-light mb-0"><?= $titre ?></p>
+        <p class="font-weight-light mb-0"><?= $classe ?></p>
       </div>
       <div class="col-4 d-flex text justify-content-center">
         <p class="mt-4"><?= $temps ?></p>
