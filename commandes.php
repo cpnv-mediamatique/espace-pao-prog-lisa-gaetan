@@ -82,6 +82,7 @@ session_start();
         </span>
       </div>
     </div>
+    <h2>Etiquettes</h2>
     <?php 
     try {
       $bdd = new PDO('mysql:host=localhost;dbname=lgorgerat;charset=utf8', 'lgorgerat', 'fpTmuxcqYJXL');
@@ -121,9 +122,9 @@ session_start();
             <?= $statut ?>
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu5">
-              <span class="dropdown-item"><a href="modif_com.php?id=<?= $id ?>&modification=traitée&statut=<?= $statut ?>">Traitée</a></span>
-              <span class="dropdown-item"><a href="modif_com.php?id=<?= $id ?>&modification=en cours&statut=<?= $statut ?>">En cours</a></span>
-              <span class="dropdown-item"><a href="modif_com.php?id=<?= $id ?>&modification=en attente&statut=<?= $statut ?>">En attente</a></span>
+              <span class="dropdown-item"><a href="modif_eti.php?id=<?= $id ?>&modification=traitée&statut=<?= $statut ?>">Traitée</a></span>
+              <span class="dropdown-item"><a href="modif_eti.php?id=<?= $id ?>&modification=en cours&statut=<?= $statut ?>">En cours</a></span>
+              <span class="dropdown-item"><a href="modif_eti.php?id=<?= $id ?>&modification=en attente&statut=<?= $statut ?>">En attente</a></span>
           </div>
         </span>
       </div>
@@ -131,6 +132,57 @@ session_start();
     <?php 
 
     };
+
+    ?>
+    <h2 class="mt-4">Cartes de visite</h2>
+    <?php
+    $info = $bdd -> prepare("SELECT * FROM cartes INNER JOIN utilisateur WHERE fk_utilisateur =  id_utilisateur");
+
+    $info->execute();
+
+    while ($donnees = $info->fetch()){
+
+      $nom = $donnees['user_nom'];
+      $design = $donnees['carte_design'];
+      $temps = $donnees['carte_date'];
+      $prenom = $donnees['carte_nom'];
+      $titre = $donnees['carte_titre'];
+      $statut = $donnees['carte_statut'];
+      $num = $donnees['carte_numero'];
+      $nb = $donnees['carte_nb'];
+      $id = $donnees['id_carte'];
+  
+    ?>
+    <div class="row mt-3">
+      <div class="col-4">
+        <span class="font-weight-bold"><?= $nom ?></span>
+        <p class="font-weight-light mb-0">Format n°<?= $design ?></p>
+        <p class="font-weight-light mb-0"><?= $prenom ?></p>
+        <p class="font-weight-light mb-0"><?= $titre ?></p>
+        <p class="font-weight-light mb-0"><?= $num ?></p>
+        <p class="font-weight-light mb-0"><?= $nb ?></p>
+      </div>
+      <div class="col-4 d-flex text justify-content-center">
+        <p class="mt-4"><?= $temps ?></p>
+      </div>
+      <div class="col-4">
+        <span class="d-flex col-sm justify-content-end mb-5">
+          <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <?= $statut ?>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu5">
+              <span class="dropdown-item"><a href="modif_carte.php?id=<?= $id ?>&modification=traitée&statut=<?= $statut ?>">Traitée</a></span>
+              <span class="dropdown-item"><a href="modif_carte.php?id=<?= $id ?>&modification=en cours&statut=<?= $statut ?>">En cours</a></span>
+              <span class="dropdown-item"><a href="modif_carte.php?id=<?= $id ?>&modification=en attente&statut=<?= $statut ?>">En attente</a></span>
+          </div>
+        </span>
+      </div>
+    </div>
+    <?php 
+
+    };
+    
     
     ?>
 

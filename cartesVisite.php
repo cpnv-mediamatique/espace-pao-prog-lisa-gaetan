@@ -61,109 +61,112 @@ session_start();
                 <div class="col m-5">
                     <!-- Nbr de cartes -->
                     <div class="card">
-                        <div class="row m-5">
-                            <div class="d-flex col-7 align-items-center justify-content-center">
+                        <form action="com_carte.php" method="post">
+                            <div class="row m-5">
+                                <div class="d-flex col-7 align-items-center justify-content-center">
+                                    <div class="centrerCartes">
+                                        <p class="card-text">
+                                            Nombres de cartes souhaitées:
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex col-5 align-items-center justify-content-center">
+
+                                    <select class="btn btn-success dropdown-toggle browser-default custom-select"
+                                        aria-haspopup="true" aria-expanded="false" name="nb">
+                                        <option  value="10">10</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Nom et prénom -->
+                            <div class="d-flex row justify-content-center mb-3 mx-2">
+                                <div class="col-10">
+                                    <div class="form-outline mb-3">
+                                        <input type="text" id="form2Example2" class="form-control" name="nom_prenom" />
+                                        <label class="form-label" for="form2Example2">Nom & Prénom</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Titre -->
+                            <div class="d-flex row justify-content-center mb-3 mx-2">
+                                <div class="col-10">
+                                    <div class="form-outline mb-3">
+                                        <input type="text" id="form2Example2" class="form-control" name="titre" />
+                                        <label class="form-label" for="form2Example2">Titre</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Numéro de téléphone -->
+                            <div class="d-flex row justify-content-center mb-3 mx-2">
+                                <div class="col-10">
+                                    <div class="form-outline mb-3">
+                                        <input type="text" id="form2Example2" class="form-control"
+                                            name="numero_telephone" />
+                                        <label class="form-label" for="form2Example2">Numéro de téléphone</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Design choisi -->
+                            <div class="row mt-2 mb-4 m-5 ">
+                                <div class="col-12">
+                                    <div class="designChoisiGauche">
+                                        <p class="card-text">
+                                            Design choisi :
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row m-2">
+                                    <div class="col-6">
+                                        <div class="form-check">
+
+                                            <label class="alignerCdVdroite">
+                                                <input type="radio" name="design" value="1" checked>
+                                                <img class="imgDesignCDV" src="img/design1.png" alt="Design 1">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-check">
+
+                                            <label class="alignerCdVgauche">
+                                                <input type="radio" name="design" value="2" checked>
+                                                <img class="imgDesignCDV" src="img/design2.png" alt="Design 2">
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row mb-5 mx-2 mt-4">
+                                    <div class="col-6">
+                                        <div class="form-check">
+                                            <label class="alignerCdVdroite">
+                                                <input type="radio" name="design" value="3" checked>
+                                                <img class="imgDesignCDV" src="img/design3.png" alt="Design 3">
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-check">
+                                            <label class="alignerCdVgauche">
+                                                <input type="radio" name="design" value="4" checked>
+                                                <img class="imgDesignCDV" src="img/design4.PNG" alt="Design 4">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-5">
                                 <div class="centrerCartes">
-                                    <p class="card-text">
-                                        Nombres de cartes souhaitées:
-                                    </p>
-                                </div>
-
-                            </div>
-                            <div class="d-flex col-5 align-items-center justify-content-center">
-
-                                <select class="btn btn-success dropdown-toggle browser-default custom-select"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <option value="1">10</option>
-                                    <option value="2">50</option>
-                                    <option value="3">100</option>
-                                </select>
-                            </div>
-                        </div>
-                        <!-- Nom et prénom -->
-                        <div class="d-flex row justify-content-center mb-3 mx-2">
-                            <div class="col-10">
-                                <div class="form-outline mb-3">
-                                    <input type="text" id="form2Example2" class="form-control" name="nom_prenom"/>
-                                    <label class="form-label" for="form2Example2">Nom & Prénom</label>
+                                <a href="com_carte.php"><button type="submit" class="btn btn-dark btn-success btn-block mb-3 btn-rounded">Commander</button></a>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Titre -->
-                        <div class="d-flex row justify-content-center mb-3 mx-2">
-                            <div class="col-10">
-                                <div class="form-outline mb-3">
-                                    <input type="text" id="form2Example2" class="form-control" name="titre"/>
-                                    <label class="form-label" for="form2Example2">Titre</label>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Numéro de téléphone -->
-                        <div class="d-flex row justify-content-center mb-3 mx-2">
-                            <div class="col-10">
-                                <div class="form-outline mb-3">
-                                    <input type="text" id="form2Example2" class="form-control" name="numero_telephone" />
-                                    <label class="form-label" for="form2Example2">Numéro de téléphone</label>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Design choisi -->
-                        <div class="row mt-2 mb-4 m-5 ">
-                            <div class="col-12">
-                                <div class="designChoisiGauche">
-                                    <p class="card-text">
-                                        Design choisi :
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="row m-2">
-                                <div class="col-6">
-                                    <div class="form-check">
-
-                                        <label class="alignerCdVdroite">
-                                            <input type="radio" name="design" value="1" checked>
-                                            <img class="imgDesignCDV"  src="img/design1.png" alt="Design 1">
-                                          </label>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-check">
-                                        
-                                        <label class="alignerCdVgauche">
-                                            <input type="radio" name="design" value="2" checked>
-                                            <img class="imgDesignCDV"  src="img/design2.png" alt="Design 2">
-                                          </label>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="row mb-5 mx-2 mt-4">
-                                <div class="col-6">
-                                    <div class="form-check">
-                                        <label class="alignerCdVdroite">
-                                            <input type="radio" name="design" value="3" checked>
-                                            <img class="imgDesignCDV"  src="img/design3.png" alt="Design 3">
-                                          </label>
-                                    </div>
-
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-check">
-                                        <label class="alignerCdVgauche">
-                                            <input type="radio" name="design" value="4" checked>
-                                            <img class="imgDesignCDV"  src="img/design4.PNG" alt="Design 4">
-                                          </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-5">
-                            <div class="centrerCartes">
-                                <a href="cartesVisite.php" class="btn btn-dark">Commander</a>
-                            </div>
-                        </div>
+                        </form>
                     </div>
 
                 </div>
@@ -184,8 +187,8 @@ session_start();
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js">
+</script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 

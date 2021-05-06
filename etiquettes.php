@@ -56,7 +56,7 @@ session_start();
                 <div class="col m-5">
                     <!-- Nbr de cartes -->
                     <div class="card">
-                        <form action="com-eti.php" method="post">
+                        <form action="com_eti.php" method="post">
                         <!-- Nom et prénom -->
                         <div class="d-flex row justify-content-center mb-3 mx-2">
                             <div class="col-10">
@@ -110,7 +110,7 @@ session_start();
                         </div>
                         <div class="row my-5">
                             <div class="centrerCartes">
-                                <a href="com-eti.php"><button type="submit" class="btn btn-dark btn-success btn-block mb-3 btn-rounded">Commander</button></a>
+                                <a href="com_eti.php"><button type="submit" class="btn btn-dark btn-success btn-block mb-3 btn-rounded">Commander</button></a>
                             </div>
                         </div>
                         </form>
